@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cybernix Techkraft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- Navbar -->
+    <div id="navbar"></div>
+    <br><br><br>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-gray-800">Contact Us</h2>
+                <p class="mt-4 text-xl text-gray-600">We would love to hear from you! Reach out to us for any inquiries.</p>
+            </div>
+            <div class="mt-12 max-w-lg mx-auto bg-gray-100 p-6 rounded-lg shadow-md">
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700">Full Name</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="block text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500" required></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-700 focus:outline-none">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="functions/fn.js"></script>
+    <script src="functions/navbar.js"></script>
+</body>
+</html>

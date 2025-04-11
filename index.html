@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twice Gallery</title>
+
+    <!-- 
+        Depedencies
+        *Tailwind Css Online
+        *Font Awesome for Navigation icons 
+        *Styling module = Css Native 
+     -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styling/style.module.css">
+</head>
+<body class="bg-gray-50 p-5">
+
+    <!-- 
+        Tempat navbar akan dimuat
+        *Home : Gallery Utama 
+        *About : Masih tahap development dan nanti akan berisi About dari Twice
+        *Contact : Masih tahap development dan nanti akan berisi contact pribadi saya 
+    -->
+
+    <div id="navbar"></div> 
+    <br><br><br>
+
+    <div class="flex items-center justify-center">
+        <img src="assets/icons/icons.png" class="w-32"> <!-- Gambar Icon/Logo Twice -->
+    </div>
+
+    <h1 class="text-4xl font-extrabold text-center mt-6 mb-6 text-gray-800">Twice Gallery Photo</h1>
+    <!-- Deskripsi Halaman -->
+    <div class="text-center mb-6">
+        <p class="text-xl text-gray-600">Website ini dibuat khusus untuk kalangan dan penggemar <strong>Twice</strong>, girlband K-pop asal Korea Selatan. Di sini, kamu bisa menikmati galeri foto terbaik mereka!</p>
+    </div>
+
+    <!-- 
+        Filter Dropdown  
+
+        berisi 10 kategori:
+        All  : akan memuat foto dari semua member Twice atau gambar apapun yang ada di folder 
+
+        Member : akan memuat gambar berdasarkan filter yang dipilih,misal Sana,maka 
+                 akan muncul semua gambar dari Sana Twice 
+    -->
+    <div class="text-center mb-6">
+    <label for="memberFilter" class="block text-lg font-medium text-gray-700 mb-2">Filter Member</label>
+        <select id="memberFilter" class="p-3 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all duration-200 ease-in-out text-gray-800 w-64 hover:bg-gray-100">
+            <option value="all" class="text-gray-600">All</option>
+            <option value="Nayeon" class="text-gray-600">Nayeon</option>
+            <option value="Jeongyeon" class="text-gray-600">Jeongyeon</option>
+            <option value="Momo" class="text-gray-600">Momo</option>
+            <option value="Sana" class="text-gray-600">Sana</option>
+            <option value="Jihyo" class="text-gray-600">Jihyo</option>
+            <option value="Mina" class="text-gray-600">Mina</option>
+            <option value="Dahyun" class="text-gray-600">Dahyun</option>
+            <option value="Chaeyoung" class="text-gray-600">Chaeyoung</option>
+            <option value="Tzuyu" class="text-gray-600">Tzuyu</option>
+        </select>
+    </div>
+
+    <!-- Section Galeri,tempat gambar akan dimuat -->
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 gallery shadow-md" id="gallery"></div>
+    
+    <!-- 
+        Section Modal,tempat Modal dari setiap gambar akan
+        muncul ketika sebuah gambar dari Section galeri di klik
+    -->
+    <div id="modal" class="modal mt-10" onclick="closeModal()">
+        <img class="mt-5" id="modalImg" src="" alt="Preview">
+    </div>
+    
+
+    <!--
+        Bagian <script> dibuat untuk memanggil semua fungsi yang ada di folder functions
+        
+            *functions/fn.js : memuat semua fungsi untuk dropdown dan filter galeri
+                               member dan mengelola galeri di folder galeries
+
+            *functions/navbar.js : dibuat untuk mengelola pemanggilan section Navigasi/Navbar
+
+    -->
+    <script src="functions/fn.js"></script> 
+    <script src="functions/navbar.js"></script>
+</body>
+</html>
