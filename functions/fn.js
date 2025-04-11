@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const gallery = document.getElementById("gallery");
-    const folder = "galeries/"; // Folder utama galeri
+    const folder = "./galeries/"; // Folder utama galeri
     const memberFilter = document.getElementById("memberFilter");
 
     // Daftar anggota untuk kategori folder
